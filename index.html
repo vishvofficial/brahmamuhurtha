@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Brahma Muhurta</title>
+	<meta name="author" content="Vishv Patel">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/popup.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body onload="fetchData()">
+	
+	<div id="main">
+		<h1 class="title">Brahma Muhurta</h1>
+		<div class="bhtime">
+			<span id="time">Fetching ...</span>
+		</div>
+		<div class="info">
+			<p>
+				<strong>Your Location</strong>:	<i id="location">fetching ...</i>
+			</p>
+			<br />
+			<p>
+				<strong>Time Zone</strong>:	<i id="timezone">fetching ...</i>
+			</p>
+			<br />
+			<p>
+				<strong>Sunrise Time</strong>:	<i id="sunrise">fetching ...</i>
+			</p>
+		</div>
+	</div>
+	
+	<script src="scripts/main.js" type="text/javascript"></script>
+</body>
+</html>
