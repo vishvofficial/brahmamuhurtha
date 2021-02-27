@@ -46,11 +46,15 @@ function getBHMT(sunrise) {
 	setBHMT(sunrise, bhmtStarts, bhmtEnds);
 }
 
+function getFormattedTime(time) {
+	return time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', hour12: false});
+}
+
 function setBHMT(sunrise, bhmtStarts, bhmtEnds) {
 	const bhmt = document.getElementById('time');
 	const sr = document.getElementById('sunrise');
 	sr.innerText = sunrise.toLocaleTimeString();
-	bhmt.innerText = bhmtStarts.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})+ "-" + bhmtEnds.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}); 
+	bhmt.innerText = getFormattedTime(bhmtStarts) + "-" + getFormattedTime(bhmtEnds); 
 }
 
 function setUserInfo(user) {
